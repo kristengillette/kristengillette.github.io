@@ -180,13 +180,6 @@ p {
 	border: none;
 }
 
-@media (max-width: 33.9em) {
-
-.nav-link {
-    font-size: 1.2rem;
-}
-
-}
 
 @media (min-width: 33.9em) {
 	.project-text a:hover {
