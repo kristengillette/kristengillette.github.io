@@ -37,11 +37,7 @@ else
       $(this).children(".btn-card").fadeOut("fast");
       $(this).children(".btn-card").css("visibility", "hidden!important");
 
-    }
-
-    );
-
-   
+    });
 }
 
 $(window).resize(function() {
@@ -95,9 +91,7 @@ if(width < 480)
       $(this).children(".btn-card").fadeOut('fast');
       $(this).children(".btn-card").css("visibility", "hidden!important");
     });
-
 }
-
 });
 
 
@@ -113,7 +107,6 @@ $(".btn-card").click(function() {
                  $(".modal-image").remove();
              }
              largePhoto = true;
-
              if (largePhoto === true) {
                  modalId = $(this).attr("data-target");
                  photoName = modalId.substring(1);
@@ -123,9 +116,7 @@ $(".btn-card").click(function() {
                  photoHTML += '.jpg" alt="image of site" >';
                  $(photoHTML).prependTo(".modal-body");
              }
-
          $(modalId).on('hidden.bs.modal', function() {
              largePhoto = false;
          });
-
        });
