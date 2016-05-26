@@ -42,7 +42,6 @@ else
 
 $(window).resize(function() {
 
-console.log("window resized");
 width = $(window).width();
 
 if(width < 480)
@@ -102,7 +101,6 @@ var photoName = "";
          var largePhoto = false;
 
 $(".btn-card").click(function() {
-            console.log(largePhoto);
              if (largePhoto === false) {
                  $(".modal-image").remove();
              }
