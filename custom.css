@@ -186,7 +186,7 @@ p {
 
 
 
-@media (min-width: 33.9em) {
+@media (min-width: 480px) {
 	.project-text a:hover {
 		color: #c2adeb;	
 }
