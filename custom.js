@@ -92,6 +92,7 @@ if(width < 480)
       $(".card").children(".card-img-overlay").stop();
       $(this).children(".card-img-overlay").fadeOut("fast");
       $(this).children(".btn-card").fadeOut('fast');
+      $(this).children(".btn-card").css("visibility", "hidden!important");
     });
 
 }
