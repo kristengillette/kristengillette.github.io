@@ -181,7 +181,19 @@ p {
 }
 
 
+.btn-card {
+	visibility: hidden!important;
+}
+
+
+
 @media (min-width: 33.9em) {
 	.project-text a:hover {
-		color: #c2adeb;	}
+		color: #c2adeb;	
+}
+
+.btn-card {
+	visibility: visible!important;
+}
+
 }
