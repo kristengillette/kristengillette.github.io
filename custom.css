@@ -184,9 +184,12 @@ p {
 	visibility: hidden!important;
 }
 
+.nav {
+	    font-size: 1.25rem;
+}
 
 
-@media (min-width: 480px) {
+@media (min-width: 33.9em) {
 	.project-text a:hover {
 		color: #c2adeb;	
 }
@@ -194,6 +197,17 @@ p {
 .btn-card {
 	visibility: visible!important;
 }
+
+.nav {
+	    font-size: 1.5rem;
+}
+
+}
+
+@media (min-width: 48em) {
+	.nav {
+	    font-size: 1.75rem;
+}	
 
 }
 
