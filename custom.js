@@ -45,7 +45,7 @@ if(width > 480) {
    $(".project-text").addClass("card-img-overlay");
    $(".card-title").removeClass("m-y-1");
    $(".card").removeClass("p-y-1");
-
+   $(".card").children(".card-img-overlay").css("visibility", "hidden");
 
   $(".card").hover(function() {
     $(".card").children(".card-img-overlay").stop();
@@ -62,7 +62,7 @@ if(width > 480) {
       $(".card").children(".card-img-overlay").stop();
       $(this).children(".card-img-overlay").fadeOut("fast");
       $(this).children(".btn-card").fadeOut("fast");
-      $(this).children(".btn-card").css("visibility", "hidden!important");
+      $(this).children(".btn-card").css("visibility", "hidden");
     }
     );
 
