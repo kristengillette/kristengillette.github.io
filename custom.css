@@ -179,6 +179,7 @@ p {
 	display: block;
 	visibility: visible;
 	border: none!important;
+	opacity: 1!important;
 }
 
 .btn-card {
