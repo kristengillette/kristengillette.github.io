@@ -38,6 +38,7 @@ width = $(window).width();
    $(".card-title").addClass("m-y-1");
    $(".card").addClass("p-y-1");
    $(".project-text").css("visibility", "visible");
+   $(".project-text").css("display", "block");
 
 if(width > 480) {
 
@@ -46,6 +47,7 @@ if(width > 480) {
    $(".card-title").removeClass("m-y-1");
    $(".card").removeClass("p-y-1");
    $(".card").children(".card-img-overlay").css("visibility", "hidden");
+   $(".project-text").css("display", "block");
 
   $(".card").hover(function() {
     $(".card").children(".card-img-overlay").stop();
@@ -63,10 +65,8 @@ if(width > 480) {
       $(this).children(".card-img-overlay").fadeOut("fast");
       $(this).children(".btn-card").fadeOut("fast");
       $(this).children(".btn-card").css("visibility", "hidden");
-    }
-    );
-
-}
+    });
+} 
 });
 
 var photoName = "";
