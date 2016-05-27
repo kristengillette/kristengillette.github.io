@@ -67,12 +67,6 @@ h1 {
 	font-family: 'Pathway Gothic One', sans-serif;
 }
 
-.card-img-overlay {
-	display: none;
-	background: rgba(67, 38, 92, .9);
-	border-radius: .25rem;
-	border: 5px solid #43265c;
-}
 
 .btn-primary-outline {
 	color: #43265c;
@@ -96,13 +90,16 @@ h1 {
 	border-color: #fff!important;
 }
 
-
-.card-inverse .card-text {
-	color: #fff;
-}
-
 .card {
 	position: relative;
+	border: none;
+	border-radius: 0rem;
+
+}
+
+.card-inverse .card-text,
+.card-inverse .card-title {
+	color: #43265c;
 }
 
 .btn-card {
@@ -113,16 +110,20 @@ h1 {
 	color: #fff!important;
 	border-color: #fff!important;
 	display: none;
+	visibility: hidden;
 }
 
+.card-text {
+	color: #43265c;
+}
 
-.mobile-card-title {
-	color: #43265c!important;
+.mobile-card {
+	color: #43265c;
 	text-align: center;
 }
 
 .btn-mobile {
-	visibility: hidden;
+	visibility: visible;
 }
 
 .bg-primary {
@@ -176,8 +177,8 @@ p {
 
 .project-text {
 	display: block;
-	visibility: hidden;
-	border: none;
+	visibility: visible;
+	border: none!important;
 }
 
 .btn-card {
@@ -189,9 +190,16 @@ p {
 }
 
 
-@media (min-width: 33.9em) {
-	.project-text a:hover {
+@media (min-width: 480px) {
+
+.project-text a:hover {
 		color: #c2adeb;	
+}
+.card-img-overlay {
+	display: none;
+	background: rgba(67, 38, 92, .9);
+	border-radius: .25rem;
+	border: 5px solid #43265c;
 }
 
 .btn-card {
@@ -200,6 +208,20 @@ p {
 
 .nav {
 	    font-size: 1.5rem;
+}
+
+.card {
+		border: 1px solid #818a91;
+		border-radius: 0.25rem;
+}
+
+.btn-mobile {
+	visibility: hidden;
+}
+
+.card-inverse .card-text,
+.card-inverse .card-title {
+	color: #fff;
 }
 
 }
