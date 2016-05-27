@@ -1,8 +1,4 @@
-var width = $(window).width();
-
-if(width < 480)
-{
-   $(".card-img").addClass("card-img-top");
+  $(".card-img").addClass("card-img-top");
    $(".project-text").removeClass("card-img-overlay");
    $(".card-text").addClass("mobile-card-title");
    $(".card-title").addClass("mobile-card-title");
@@ -15,10 +11,12 @@ if(width < 480)
    $(".btn-mobile").css("visibility", "visible");
    $(".project-text").css("display", "block");
    $(".project-text").css("visibility", "visible");
-}
 
-else
+var width = $(window).width();
+
+if(width > 480)
 {
+
   $(".card").hover(function() {
     $(".card").children(".card-img-overlay").stop();
     $(".card").children(".card-img-overlay").css("visibility", "hidden");
@@ -33,20 +31,18 @@ else
     function() {
       $(".card").children(".card-img-overlay").stop();
       $(this).children(".card-img-overlay").fadeOut("fast");
-      $(this).children(".btn-card").css("visibility", "hidden");
       $(this).children(".btn-card").fadeOut("fast");
       $(this).children(".btn-card").css("visibility", "hidden!important");
-
     });
-}
+   }
+
+
 
 $(window).resize(function() {
 
 width = $(window).width();
 
-if(width < 480)
-{
-   $(".card-img").addClass("card-img-top");
+ $(".card-img").addClass("card-img-top");
    $(".project-text").removeClass("card-img-overlay");
    $(".card-text").addClass("mobile-card-title");
    $(".card-title").addClass("mobile-card-title");
@@ -59,8 +55,8 @@ if(width < 480)
    $(".btn-mobile").css("visibility", "visible");
    $(".project-text").css("display", "block");
    $(".project-text").css("visibility", "visible");
-   $(".project-text").css("border", "none");
-} else {
+
+if(width > 480) {
   $(".project-text").css("visibility", "hidden");
   $(".card-img").removeClass("card-img-top");
    $(".project-text").addClass("card-img-overlay");
@@ -70,10 +66,10 @@ if(width < 480)
    $(".card").css("border", "1px solid #818a91");
    $(".card").css("border-radius", "0.25rem");
    $(".card").removeClass("p-y-1");
-  $(".btn-card").css("visibility", "visible");
+   $(".btn-card").css("visibility", "visible");
    $(".btn-mobile").css("visibility", "hidden");
 
-	$(".card").hover(function() {
+  $(".card").hover(function() {
     $(".card").children(".card-img-overlay").stop();
     $(".card").children(".card-img-overlay").css("visibility", "hidden");
     $(this).children(".card-img-overlay").fadeIn("fast");
@@ -87,9 +83,12 @@ if(width < 480)
     function() {
       $(".card").children(".card-img-overlay").stop();
       $(this).children(".card-img-overlay").fadeOut("fast");
-      $(this).children(".btn-card").fadeOut('fast');
+      $(this).children(".btn-card").fadeOut("fast");
       $(this).children(".btn-card").css("visibility", "hidden!important");
-    });
+    }
+
+    );
+
 }
 });
 
@@ -101,10 +100,12 @@ var photoName = "";
          var largePhoto = false;
 
 $(".btn-card").click(function() {
+            console.log(largePhoto);
              if (largePhoto === false) {
                  $(".modal-image").remove();
              }
              largePhoto = true;
+
              if (largePhoto === true) {
                  modalId = $(this).attr("data-target");
                  photoName = modalId.substring(1);
@@ -114,7 +115,9 @@ $(".btn-card").click(function() {
                  photoHTML += '.jpg" alt="image of site" >';
                  $(photoHTML).prependTo(".modal-body");
              }
+
          $(modalId).on('hidden.bs.modal', function() {
              largePhoto = false;
          });
+
        });
