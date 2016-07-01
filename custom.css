@@ -190,7 +190,13 @@ p {
 	    font-size: 1.25rem;
 }
 
+
+
 @media (min-width: 480px) {
+
+.project-text a:hover {
+		color: #c2adeb;	
+}
 
 .card-img-overlay {
 	display: none;
@@ -198,6 +204,7 @@ p {
 	border-radius: .25rem;
 	border: 5px solid #43265c;
 }
+
 
 .project-text a:hover {
 		color: #c2adeb;	
@@ -223,8 +230,6 @@ p {
 .card-inverse .card-text,
 .card-inverse .card-title {
 	color: #fff;
-
-}
 
 }
 
